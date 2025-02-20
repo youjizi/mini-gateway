@@ -13,6 +13,9 @@
       <module>mini-gateway-core</module>
       <module>mini-gateway-assist</module>
       <module>mini-gateway-engine</module>
+        <module>mini-gateway-admin</module>
+        <module>mini-gateway-test</module>
+        <module>mini-gateway-sdk</module>
     </modules>
 
   <parent>

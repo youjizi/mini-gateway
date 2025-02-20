@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+dubbo:
+  application:
+    name: api-gateway-test
+    version: 1.0.0
+  registry:
+    #address: N/A 泛化调用不能使用此方式
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20881
+  scan:
+    base-packages: cn.xyz.gateway.test.interface
+
+# 前面章节不涉及到上报服务，需要把以下配置注释掉
+api-gateway-sdk:
+  address: http://localhost:8000  # 注册中心；从这里获取接口信息以及完成注册网关操作
+  systemId: api-gateway-test-provider
+  systemName: 拉新系统
+  systemRegistry: zookeeper://127.0.0.1:2181

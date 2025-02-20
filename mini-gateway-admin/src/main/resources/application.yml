@@ -1,0 +1,19 @@
+server:
+  port: 8000
+
+nginx:
+  server_name: 172.20.10.12
+  file_path: C:\\data
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/api_gateway?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  config-location:  classpath:/config/mybatis-config.xml
